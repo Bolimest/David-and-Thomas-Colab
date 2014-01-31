@@ -1,0 +1,36 @@
+public class Employee {
+	private double salary;
+	private String name;
+	
+	public Employee(String character,double amount)
+	{
+		name = character;
+		salary = amount;			
+	}
+	public void setSalary(double amount)
+	{
+		salary = amount;
+	}
+	public void setName(String character)
+	{
+		  name = character;
+	}
+	public double getSalary()
+	{
+		return salary;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public void raiseSalary(double percent)
+	{
+		salary = salary + (salary * (percent/100));
+	} 
+	public static void main(String[] args)
+  {
+	  Employee a0001 = new Employee("John Paul",50000); 
+	  a0001.raiseSalary(10);
+	  System.out.println(a0001.getName() +": " +a0001.getSalary());
+  }
+}
