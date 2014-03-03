@@ -1,26 +1,56 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 public class CurrencyConverter 
 {
-static boolean working = false;	
+	static double exchrate = 0;
+	static double usd = 0;
+	
 public static void main(String[] args)
 {
-	Scanner moneyimput = new Scanner(System.in);
-	System.out.println("Enter amount in USD");
-	double usd = moneyimput.nextDouble();
-	while(working = false){
+Scanner moneyimput = new Scanner(System.in);
+System.out.println("Enter amount in USD");
+while(true)
 		{
-		System.out.println("Enter Euro to USD exchange rates: ");
-		try{
-			double exchrate = moneyimput.nextDouble();
-			working = true;
-		}
-		catch(java.util.InputMismatchException e)
-		{
-			System.out.println("Invalid imput. Please try again.");
-			working = true;
-		}
-		}
-		}
+try
+{
+	double a = moneyimput.nextDouble();
+	usd = a;
+	break;
+}
+catch(java.util.InputMismatchException e)
+{
+	System.out.println("Invalid imput. Please try again.");
+	moneyimput.nextDouble();
+	continue;	
+}
+		}			
+while(true)
+	{
+System.out.println("Enter USD to Euro exchange rates: ");
+try
+{
+	double b = moneyimput.nextDouble();
+	exchrate = b;
+	break;
+	 }
+catch(java.util.InputMismatchException e)	
+{	
+	System.out.println("Invalid imput. Please try again.");
+	moneyimput.nextDouble();
+	continue;
+}
+	}
+System.out.println(exchrate * usd +" Euros");
+try
+{
+	TimeUnit.SECONDS.sleep(1);
+}
+catch(InterruptedException e)
+{
+	return;
+}
+System.out.println((exchrate * usd) * 1.96 +" Bulgerian Lev's");
+}
+}
 
-}
-}
+
