@@ -52,4 +52,4 @@ catch(InterruptedException e)
 }
 System.out.println((exchrate * usd) * 1.96 +" Bulgerian Lev's");
 }
-}
+}     
