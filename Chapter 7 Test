@@ -51,6 +51,7 @@ catch(InterruptedException e)
 	return;
 }
 System.out.println((exchrate * usd) * 1.96 +" Bulgerian Lev's");
+//http://stackoverflow.com/questions/7000266/close-window-on-pressing-of-certain-key
 }
 }     
-http://stackoverflow.com/questions/7000266/close-window-on-pressing-of-certain-key
+
