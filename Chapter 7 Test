@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-public class CurrencyConverter 
+import java.awt.event.*;
+public class CurrencyConverter implements KeyListener
 {
 	static double exchrate = 0;
 	static double usd = 0;
@@ -52,5 +53,3 @@ catch(InterruptedException e)
 System.out.println((exchrate * usd) * 1.96 +" Bulgerian Lev's");
 }
 }
-
-
