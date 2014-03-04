@@ -1,27 +1,35 @@
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-import java.awt.event.*;
-public class CurrencyConverter implements KeyListener
-{
-	static double exchrate = 0;
-	static double usd = 0;
-	
-public static void main(String[] args)
-{
+public class CurrencyConverter{ 
+static double exchrate = 0;
+static double usd = 0;
+public static void main(String[] args){
+
 Scanner moneyimput = new Scanner(System.in);
+
 System.out.println("Enter amount in USD");
 while(true)
 		{
 try
 {
-	double a = moneyimput.nextDouble();
-	usd = a;
+	String a = moneyimput.next();
+	
+	if(a.equals("q"))
+	{
+	System.exit(0);	
+	}
+	else
+	{
+	usd = Double.parseDouble(a);	
+	
+	}
 	break;
 }
 catch(java.util.InputMismatchException e)
 {
 	System.out.println("Invalid imput. Please try again.");
 	moneyimput.nextDouble();
+	
 	continue;	
 }
 		}			
@@ -30,8 +38,16 @@ while(true)
 System.out.println("Enter USD to Euro exchange rates: ");
 try
 {
-	double b = moneyimput.nextDouble();
-	exchrate = b;
+	
+	String b = moneyimput.next();
+	if(b.equals("q"))
+	{
+	System.exit(0);
+	}
+	else
+	{
+	exchrate = Double.parseDouble(b);	
+	}
 	break;
 	 }
 catch(java.util.InputMismatchException e)	
@@ -51,7 +67,6 @@ catch(InterruptedException e)
 	return;
 }
 System.out.println((exchrate * usd) * 1.96 +" Bulgerian Lev's");
-//http://stackoverflow.com/questions/7000266/close-window-on-pressing-of-certain-key
 }
-}     
-
+}
+	
