@@ -1,0 +1,17 @@
+import javax.swing.JFrame;
+public class GridViewer{
+public static void main(String[] args)
+	{
+	final int FRAME_WIDTH = 500;
+	final int FRAME_HEIGHT = 500;
+		
+		JFrame frame = new JFrame();
+		frame.setSize(FRAME_WIDTH,FRAME_HEIGHT);
+		frame.setTitle("DrunkardViewer");
+		frame. setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Grid component = new Grid();
+		frame.add(component);
+		frame.setVisible(true);
+	}
+
+}
