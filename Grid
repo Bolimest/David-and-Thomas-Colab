@@ -1,0 +1,29 @@
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.geom.*;
+import javax.swing.JPanel;
+import javax.swing.JComponent;
+
+public class Grid extends JComponent
+{		
+	public void paint(Graphics g)
+	{	
+		final int FRAME_WIDTH = 500;
+		final int FRAME_HEIGHT = 500;
+		int x1 = 0;
+		int x2 = 0;
+		int y1 = 0;
+		int y2 = 0;
+		super.paint(g);
+		Graphics2D g2 = (Graphics2D) g;
+		for(int a = 1;a<11;a++)
+		{
+		g2.drawLine(x1,y1,x2,y2);
+		x2 = x2 + (FRAME_WIDTH/10);
+		y1 = y1 + (FRAME_HEIGHT/10);
+		
+		
+		}
+	}
+		
+}
