@@ -2,8 +2,8 @@ import javax.swing.JFrame;
 public class GridViewer{
 public static void main(String[] args)
 	{
-	final int FRAME_WIDTH = 500;
-	final int FRAME_HEIGHT = 500;
+	final int FRAME_WIDTH = 600;
+	final int FRAME_HEIGHT = 600;
 		
 		JFrame frame = new JFrame();
 		frame.setSize(FRAME_WIDTH,FRAME_HEIGHT);
@@ -12,6 +12,7 @@ public static void main(String[] args)
 		Grid component = new Grid();
 		frame.add(component);
 		frame.setVisible(true);
+		
 	}
 
 }
